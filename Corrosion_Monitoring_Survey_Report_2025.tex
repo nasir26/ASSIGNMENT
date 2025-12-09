@@ -1,0 +1,739 @@
+\documentclass[12pt,a4paper]{report}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{float}
+\usepackage{xcolor}
+\usepackage{colortbl}
+\usepackage{fancyhdr}
+\usepackage{titlesec}
+\usepackage{hyperref}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{enumitem}
+\usepackage{amsmath}
+\usepackage{siunitx}
+
+% Page setup
+\geometry{margin=1in, top=1.2in, bottom=1in}
+
+% Header and footer
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small Corrosion Monitoring Survey Report}
+\fancyhead[R]{\small Qatar Energy - Halul \& PS-3}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+% Colors
+\definecolor{qatarmaroon}{RGB}{139, 0, 0}
+\definecolor{tableheader}{RGB}{51, 102, 153}
+\definecolor{lightgray}{RGB}{245, 245, 245}
+
+% Title formatting
+\titleformat{\chapter}[display]
+  {\normalfont\Large\bfseries\color{qatarmaroon}}
+  {\chaptertitlename\ \thechapter}{20pt}{\Huge}
+
+\titleformat{\section}
+  {\normalfont\large\bfseries\color{qatarmaroon}}
+  {\thesection}{1em}{}
+
+% Hyperref setup
+\hypersetup{
+    colorlinks=true,
+    linkcolor=qatarmaroon,
+    filecolor=magenta,      
+    urlcolor=blue,
+}
+
+\begin{document}
+
+% Title Page
+\begin{titlepage}
+    \centering
+    \vspace*{2cm}
+    
+    {\Huge\bfseries\color{qatarmaroon} CORROSION MONITORING SURVEY\\[0.3cm]
+    FINAL REPORT}\\[0.5cm]
+    
+    \vspace{1cm}
+    
+    {\Large\bfseries Qatar Energy (QE) Halul Island \& PS-3 Offshore Platforms}\\[0.3cm]
+    {\large Contract No: LC241047A0}
+    
+    \vspace{2cm}
+    
+    \begin{tabular}{|p{4cm}|p{8cm}|}
+        \hline
+        \rowcolor{tableheader}
+        \textcolor{white}{\textbf{Field}} & \textcolor{white}{\textbf{Details}} \\
+        \hline
+        Project & Corrosion Coupon Retrieval \& ER Probe Monitoring \\
+        \hline
+        Location & PS-3 \& Halul Island, Qatar \\
+        \hline
+        Survey Period & July 8 -- August 25, 2025 \\
+        \hline
+        Client & Qatar Energy (QE) \\
+        \hline
+        Contractor & Axess-Corrosion / Petromech \\
+        \hline
+    \end{tabular}
+    
+    \vspace{2cm}
+    
+    {\large\bfseries Report Date: December 2025}
+    
+    \vfill
+    
+    {\footnotesize\textit{CONFIDENTIAL - For Internal Use Only}}
+\end{titlepage}
+
+% Table of Contents
+\tableofcontents
+\newpage
+
+% Executive Summary
+\chapter{Executive Summary}
+
+This report presents the findings of the Corrosion Monitoring Survey conducted at Qatar Energy (QE) offshore facilities, specifically the PS-3 platforms and Halul Island locations. The survey was conducted between July 8 and August 25, 2025, under Contract No. LC241047A0.
+
+\section{Key Findings}
+
+\begin{itemize}[leftmargin=*]
+    \item \textbf{Total Corrosion Coupons Processed:} 212 coupons across all locations
+    \item \textbf{Coupons Successfully Retrieved:} 122 (57.5\%)
+    \item \textbf{Laboratory Analysis Completed:} 98 coupons (46.2\%)
+    \item \textbf{ER Probe Readings Recorded:} 36 probe locations at PS-3
+    \item \textbf{New Coupons Installed:} Multiple locations serviced with new C1018 carbon steel coupons
+\end{itemize}
+
+\section{Summary Statistics by Location}
+
+\begin{table}[H]
+\centering
+\caption{Coupon Processing Status by Platform}
+\begin{tabular}{lcccc}
+\toprule
+\textbf{Location} & \textbf{Total} & \textbf{Received} & \textbf{Completed} & \textbf{Pending} \\
+\midrule
+PS-3 \& Halul Island & 90 & 76 & 75 & 15 \\
+PS-2 & 39 & 27 & 27 & 12 \\
+PS-4 & 28 & 21 & 21 & 7 \\
+PS-1 & 32 & -- & -- & -- \\
+Various Stations & 20 & 15 & 15 & 5 \\
+\midrule
+\textbf{Grand Total} & \textbf{209} & \textbf{139} & \textbf{138} & \textbf{39} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\section{Overall Assessment}
+
+The corrosion monitoring survey was successfully completed with the retrieval and analysis of corrosion coupons from the majority of accessible locations. The survey revealed generally acceptable corrosion rates at most locations, with specific areas requiring continued monitoring or remedial action.
+
+% Introduction
+\chapter{Introduction}
+
+\section{Background}
+
+Corrosion monitoring is a critical aspect of integrity management for offshore oil and gas facilities. Qatar Energy operates numerous offshore platforms in the Arabian Gulf, including the PS-3 complex and Halul Island facilities. Regular corrosion monitoring helps ensure safe and reliable operation of these assets by identifying areas of accelerated metal loss before they become integrity concerns.
+
+\section{Purpose of the Survey}
+
+The primary objectives of this corrosion monitoring survey were to:
+
+\begin{enumerate}
+    \item Retrieve installed corrosion coupons from designated monitoring locations
+    \item Conduct visual inspection and weight loss analysis of retrieved coupons
+    \item Record electrical resistance (ER) probe readings at all probe locations
+    \item Replace expired ER probes with new units
+    \item Install new corrosion coupons for continued monitoring
+    \item Identify any locations requiring remedial action or enhanced monitoring
+\end{enumerate}
+
+\section{Report Structure}
+
+This report is organized as follows:
+\begin{itemize}
+    \item \textbf{Chapter 3:} Scope of Work -- Details the planned activities
+    \item \textbf{Chapter 4:} Field Services -- Describes the execution of field activities
+    \item \textbf{Chapter 5:} General Observations -- Presents field observations
+    \item \textbf{Chapter 6:} Survey Findings -- Contains detailed results and data
+    \item \textbf{Chapter 7:} Conclusions -- Summarizes key outcomes
+    \item \textbf{Chapter 8:} Recommendations -- Provides actionable recommendations
+    \item \textbf{Appendices:} Supporting data and photographic records
+\end{itemize}
+
+% Scope of Work
+\chapter{Scope of Work}
+
+\section{Work Locations}
+
+The survey covered the following offshore facilities:
+
+\subsection{PS-3 Platform Complex}
+\begin{itemize}
+    \item PS-3A Platform (Lower Deck, Production Area)
+    \item PS-3B Platform (Separator Location, Production Manifold, Pig Launcher)
+    \item PS-3C Platform (Riser Platform, NGL Facilities)
+    \item Pipeline Pipe Bridges (PS-3A to PS-3B, PS-3B to PS-3C)
+\end{itemize}
+
+\subsection{Halul Island Terminal}
+\begin{itemize}
+    \item Halul Platform Upper Deck
+    \item Halul Riser New Platform Upper Deck Level 4
+    \item NGL Facilities (Main Deck and Upper Deck)
+\end{itemize}
+
+\section{Equipment and Materials}
+
+The following equipment was utilized during the survey:
+
+\begin{table}[H]
+\centering
+\caption{Equipment List}
+\begin{tabular}{ll}
+\toprule
+\textbf{Equipment} & \textbf{Purpose} \\
+\midrule
+25" RBS Retrieval Tool & High-pressure coupon retrieval \\
+37" RBS Retrieval Tool & Extended reach locations \\
+Checkmate ER Probe Reader & Electrical resistance measurements \\
+Pressure Test Equipment & Integrity verification \\
+Corrosion Coupons (C1018) & Replacement coupons \\
+ER Probes (Type B, D) & Probe replacements \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\section{Coupon Types}
+
+Three types of corrosion coupons were utilized in this monitoring program:
+
+\begin{table}[H]
+\centering
+\caption{Coupon Specifications}
+\begin{tabular}{lccl}
+\toprule
+\textbf{Type} & \textbf{Material} & \textbf{Surface Area (in²)} & \textbf{Density (g/cm³)} \\
+\midrule
+3" Strip Coupon & C 1018 & 5.2 & 7.86 \\
+Disc Coupon & C 1018 & 2.5 & 7.86 \\
+2" Ladder Coupon & C 1018 & 3.4 & 7.86 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+% Field Services
+\chapter{Field Services}
+
+\section{Mobilization and Site Preparation}
+
+Field activities commenced on July 8, 2025, with the survey team arriving at PS-3 platform. Initial activities included:
+
+\begin{itemize}
+    \item Completion of platform safety inductions
+    \item Submission of work permits and Level 2 Job Safety Analysis (JSA)
+    \item Coordination meetings with site safety team, permit controller, and permit authority
+    \item Visual inspection of all coupon and probe locations
+    \item Assessment of scaffolding requirements
+\end{itemize}
+
+\section{Daily Progress Summary}
+
+\subsection{Phase 1: PS-3 Platform (July 8-25, 2025)}
+
+\begin{longtable}{|p{2.5cm}|p{11cm}|}
+\caption{Daily Activities Log -- Phase 1} \\
+\hline
+\rowcolor{tableheader}
+\textcolor{white}{\textbf{Date}} & \textcolor{white}{\textbf{Activities Completed}} \\
+\hline
+\endfirsthead
+\hline
+\rowcolor{tableheader}
+\textcolor{white}{\textbf{Date}} & \textcolor{white}{\textbf{Activities Completed}} \\
+\hline
+\endhead
+July 8, 2025 & Arrived at PS-3; completed inductions; submitted work permits and JSA; visual inspection of all locations \\
+\hline
+July 9, 2025 & ER Probe readings at 36 locations; commenced coupon retrievals; serviced locations 53-XCC-951, 53-XCC-953 \\
+\hline
+July 13, 2025 & Continued coupon retrievals at PS-3C Platform; serviced multiple riser platform locations \\
+\hline
+July 14, 2025 & Coupon retrievals and ER probe replacements at NGL facilities \\
+\hline
+July 16-17, 2025 & Continued operations at Production Manifold and Separator locations \\
+\hline
+July 18, 2025 & Serviced pipeline pipe bridge locations between platforms \\
+\hline
+July 20-22, 2025 & Completed remaining PS-3B and PS-3C locations; probe replacements \\
+\hline
+\end{longtable}
+
+\subsection{Phase 2: Halul Island \& Final PS-3 Work (August 2025)}
+
+\begin{longtable}{|p{2.5cm}|p{11cm}|}
+\caption{Daily Activities Log -- Phase 2} \\
+\hline
+\rowcolor{tableheader}
+\textcolor{white}{\textbf{Date}} & \textcolor{white}{\textbf{Activities Completed}} \\
+\hline
+\endfirsthead
+\hline
+\rowcolor{tableheader}
+\textcolor{white}{\textbf{Date}} & \textcolor{white}{\textbf{Activities Completed}} \\
+\hline
+\endhead
+August 20, 2025 & ER Probe service and corrosion coupon retrieval at multiple locations \\
+\hline
+August 21, 2025 & Continued coupon retrievals; ER probe replacements \\
+\hline
+August 22, 2025 & Multiple coupon locations serviced; probe readings recorded \\
+\hline
+August 23, 2025 & Coupon retrieval operations at remaining accessible locations \\
+\hline
+August 24, 2025 & Work suspended due to rough sea conditions \\
+\hline
+August 25, 2025 & Final coupon retrievals completed; PS-3 work finalized \\
+\hline
+\end{longtable}
+
+\section{Work Methods}
+
+\subsection{Coupon Retrieval Procedure}
+
+\begin{enumerate}
+    \item Verify process conditions and obtain work permit
+    \item For high-pressure locations (\textgreater 500 psi), perform back-pressure test
+    \item Install retrieval tool (25" or 37" RBS tool as required)
+    \item Extract coupon holder assembly
+    \item Document coupon condition with photographs
+    \item Remove coupons from holder; label and package for laboratory
+    \item Install new pre-weighed coupons
+    \item Replace all pressure-retaining seals
+    \item Reinstall holder and verify integrity
+\end{enumerate}
+
+\subsection{ER Probe Reading Procedure}
+
+\begin{enumerate}
+    \item Connect Checkmate reader to probe access point
+    \item Record Check, Div, Metal Loss, and Corrosion Rate readings
+    \item Document any anomalies or inconsistent readings
+    \item For probes requiring replacement: extract and install new probe
+    \item Record baseline readings for new probes
+\end{enumerate}
+
+% General Observations
+\chapter{General Observations}
+
+\section{Equipment Condition}
+
+\subsection{Checkmate ER Probe Reader}
+
+During ER probe readings on July 9, 2025, it was observed that readings were inconsistent and required significant time to stabilize. Investigation revealed that the position of the Checkmate cable significantly affected readings, suggesting potential cable deterioration. The Checkmate unit is approximately 12 years old and is recommended for replacement.
+
+\subsection{Retrieval Tools}
+
+The 25" and 37" RBS retrieval tools performed satisfactorily throughout the campaign. No significant issues were encountered with the pressure-retaining mechanisms.
+
+\section{Access Conditions}
+
+Several locations presented access challenges:
+
+\begin{table}[H]
+\centering
+\caption{Locations with Access Issues}
+\begin{tabular}{lll}
+\toprule
+\textbf{Location} & \textbf{Issue} & \textbf{Action Required} \\
+\midrule
+53-XCC-1428 & Elevated level access & Permanent service platform \\
+53-XCP-1427 & Elevated level access & Permanent service platform \\
+6-GC-430036 & Protective cover jammed & Scaffolding required \\
+Multiple PS-3C & Structural obstruction & Platform modification \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\section{Coupon Condition Observations}
+
+The majority of retrieved coupons exhibited the following characteristics:
+\begin{itemize}
+    \item Dark coloration consistent with exposure to crude oil environment
+    \item Small amounts of soft, easily removable deposits
+    \item No evidence of severe pitting or localized attack on most coupons
+    \item Weight loss measurements indicate general uniform corrosion
+\end{itemize}
+
+\section{Weather Impact}
+
+Work was suspended on August 24, 2025, due to rough sea conditions that prevented safe vessel operations to PS-3. Activities resumed the following day when conditions improved.
+
+% Survey Findings
+\chapter{Survey Findings}
+
+\section{Corrosion Coupon Results -- PS-3 Locations}
+
+The following tables present the detailed results of corrosion coupon analysis from PS-3 platform locations:
+
+\begin{longtable}{|p{2cm}|p{2.5cm}|p{2cm}|p{2.5cm}|p{1.5cm}|p{2cm}|}
+\caption{PS-3 Coupon Retrieval Results} \\
+\hline
+\rowcolor{tableheader}
+\textcolor{white}{\textbf{Tag No.}} & \textcolor{white}{\textbf{Location}} & \textcolor{white}{\textbf{Coupon ID}} & \textcolor{white}{\textbf{Weight (g)}} & \textcolor{white}{\textbf{Status}} \\
+\hline
+\endfirsthead
+\hline
+\rowcolor{tableheader}
+\textcolor{white}{\textbf{Tag No.}} & \textcolor{white}{\textbf{Location}} & \textcolor{white}{\textbf{Coupon ID}} & \textcolor{white}{\textbf{Weight (g)}} & \textcolor{white}{\textbf{Status}} \\
+\hline
+\endhead
+
+53-XCC-1413 & PS-3A Lower Deck & MQ039 & 36.5112 & Completed \\
+\hline
+53-XCC-1413 & PS-3A Lower Deck & MQ040 & 36.8093 & Completed \\
+\hline
+53-XCC-918 & Pipe Bridge & ZK885 & 17.3866 & Completed \\
+\hline
+53-XCC-982 & Pipe Bridge & ZK884 & 17.9588 & Completed \\
+\hline
+53-XCC-949 & PS-3B to 3C & MQ005 & 36.8855 & Completed \\
+\hline
+53-XCC-949 & PS-3B to 3C & MQ006 & 36.8841 & Completed \\
+\hline
+53-XCC-951 & Production Line & MQ003 & 36.8444 & Completed \\
+\hline
+53-XCC-951 & Production Line & MQ004 & 36.9441 & Completed \\
+\hline
+53-XCC-953 & Production Line & MQ001 & 36.9255 & Completed \\
+\hline
+53-XCC-953 & Production Line & MQ002 & 36.927 & Completed \\
+\hline
+53-XCC-1430 & Separator & MQ033 & 37.09 & Completed \\
+\hline
+53-XCC-1430 & Separator & MQ034 & 37.0153 & Completed \\
+\hline
+53-XCC-1428 & Separator & MQ035 & 36.7602 & Completed \\
+\hline
+53-XCC-1428 & Separator & MQ036 & 37.0007 & Completed \\
+\hline
+53-XCC-973 & Separator & ZK886 & 17.1545 & Completed \\
+\hline
+53-XCC-971 & Separator & MQ049 & 36.8528 & Completed \\
+\hline
+53-XCC-971 & Separator & MQ050 & 36.8239 & Completed \\
+\hline
+53-XCC-909 & Separator & MQ031 & 36.9129 & Completed \\
+\hline
+53-XCC-909 & Separator & MQ032 & 37.0324 & Completed \\
+\hline
+53-XCC-1001 & Pig Launcher & MQ037 & 36.6161 & Completed \\
+\hline
+53-XCC-1001 & Pig Launcher & MQ038 & 36.9023 & Completed \\
+\hline
+53-XCC-945 & Production Manifold & MQ047 & 36.8085 & Completed \\
+\hline
+53-XCC-945 & Production Manifold & MQ048 & 36.734 & Completed \\
+\hline
+53-XCC-1143 & Riser Platform & MQ000 & 36.8805 & Completed \\
+\hline
+53-XCC-1143 & Riser Platform & MQ999 & 36.779 & Completed \\
+\hline
+\end{longtable}
+
+\section{ER Probe Readings}
+
+Sample ER probe readings recorded during the survey:
+
+\begin{table}[H]
+\centering
+\caption{ER Probe Readings Summary}
+\begin{tabular}{lcccc}
+\toprule
+\textbf{Probe ID} & \textbf{Check} & \textbf{Div} & \textbf{M.Loss} & \textbf{CR (mpy)} \\
+\midrule
+53-XCP-950 & 831 & 177.7 & 0.71 & 0 \\
+53-XCP-1427 & 771 & 76.8 & -- & -- \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\section{Coupon Installation Summary}
+
+New coupons installed during the survey:
+
+\begin{table}[H]
+\centering
+\caption{New Coupon Installation Record}
+\begin{tabular}{llll}
+\toprule
+\textbf{Location} & \textbf{Coupon ID} & \textbf{Weight (g)} & \textbf{Install Date} \\
+\midrule
+53-XCC-951 & NE590 & 36.7337 & 09-07-2025 \\
+53-XCC-951 & NE591 & 36.7703 & 09-07-2025 \\
+53-XCC-953 & NE588 & 36.9901 & 09-07-2025 \\
+53-XCC-953 & NE589 & 36.7604 & 09-07-2025 \\
+53-XCC-1428 & NE652 & 36.7398 & 25-08-2025 \\
+53-XCC-1428 & NE653 & 36.8152 & 25-08-2025 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\section{Statistical Summary}
+
+\subsection{Overall Completion Rates}
+
+\begin{table}[H]
+\centering
+\caption{Survey Completion Statistics}
+\begin{tabular}{lcc}
+\toprule
+\textbf{Metric} & \textbf{Count} & \textbf{Percentage} \\
+\midrule
+Total Planned Locations & 212 & 100\% \\
+Coupons Successfully Retrieved & 122 & 57.5\% \\
+Laboratory Analysis Completed & 98 & 46.2\% \\
+Locations Not Accessible & 39 & 18.4\% \\
+Pending Analysis & 34 & 16.0\% \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+% Conclusions
+\chapter{Conclusions}
+
+Based on the corrosion monitoring survey conducted at PS-3 and Halul Island facilities, the following conclusions are drawn:
+
+\section{Survey Completion}
+
+\begin{enumerate}
+    \item The corrosion monitoring survey was successfully executed between July 8 and August 25, 2025, covering the majority of planned locations at PS-3 platforms and Halul Island.
+    
+    \item A total of 122 corrosion coupons were successfully retrieved from 212 planned locations, representing a 57.5\% retrieval rate.
+    
+    \item Laboratory analysis has been completed for 98 coupons (46.2\%), with remaining samples pending processing.
+    
+    \item ER probe readings were recorded at all 36 accessible probe locations at PS-3.
+\end{enumerate}
+
+\section{Corrosion Assessment}
+
+\begin{enumerate}
+    \item The majority of retrieved coupons showed uniform general corrosion with dark deposits consistent with crude oil exposure.
+    
+    \item No evidence of severe pitting corrosion or localized attack was observed on the inspected coupons.
+    
+    \item Weight loss measurements indicate corrosion rates within acceptable limits for the operating environment.
+    
+    \item ER probe readings showed stable corrosion rates at most locations, with some probes requiring replacement due to age.
+\end{enumerate}
+
+\section{Equipment and Access}
+
+\begin{enumerate}
+    \item The Checkmate ER probe reader exhibited inconsistent readings, likely due to cable degradation after 12 years of service.
+    
+    \item Several locations (approximately 18.4\%) could not be accessed due to:
+    \begin{itemize}
+        \item Elevated positions requiring scaffolding or permanent platforms
+        \item Structural obstructions blocking retrieval tool access
+        \item Jammed protective covers
+    \end{itemize}
+    
+    \item High-pressure locations (1500 psi) were successfully serviced using appropriate back-pressure testing procedures.
+\end{enumerate}
+
+% Recommendations
+\chapter{Recommendations}
+
+Based on the survey findings and observations, the following recommendations are made:
+
+\section{Immediate Actions}
+
+\begin{enumerate}
+    \item \textbf{Replace Checkmate ER Probe Reader:} The current unit is 12 years old and showing signs of cable deterioration affecting reading accuracy. A new unit should be procured before the next survey campaign.
+    
+    \item \textbf{Complete Pending Coupon Analysis:} Expedite laboratory analysis of the remaining 34 coupons to complete the corrosion rate assessment.
+    
+    \item \textbf{Address Jammed Access Fittings:} Location 6-GC-430036 has a jammed protective cover requiring maintenance attention.
+\end{enumerate}
+
+\section{Access Improvements}
+
+\begin{enumerate}
+    \item \textbf{Install Permanent Service Platforms:} Locations 53-XCC-1428 and 53-XCP-1427 require permanent service platforms for safe and efficient access during future surveys.
+    
+    \item \textbf{Structural Modifications:} Review and modify structural elements that obstruct retrieval tool access at certain locations on PS-3C.
+    
+    \item \textbf{Scaffolding Plan:} Develop a pre-survey scaffolding plan for elevated locations to minimize delays during future campaigns.
+\end{enumerate}
+
+\section{Monitoring Program Enhancements}
+
+\begin{enumerate}
+    \item \textbf{Survey Frequency:} Maintain the current 2-year survey interval for corrosion coupon retrieval and analysis.
+    
+    \item \textbf{ER Probe Program:} Consider more frequent ER probe readings (quarterly or semi-annually) to track corrosion rate trends between coupon surveys.
+    
+    \item \textbf{Data Management:} Implement a centralized database system for tracking coupon installation dates, weights, and analysis results.
+    
+    \item \textbf{Coupon Identification:} Ensure all coupon locations are clearly tagged and documented to prevent "Not Available" designations.
+\end{enumerate}
+
+\section{Future Survey Planning}
+
+\begin{enumerate}
+    \item Schedule the next corrosion monitoring survey for mid-2027.
+    
+    \item Coordinate with operations to address access issues before the next survey.
+    
+    \item Pre-position scaffolding at known elevated locations.
+    
+    \item Ensure adequate weather windows are planned for offshore vessel operations.
+\end{enumerate}
+
+% Appendices
+\appendix
+\chapter{Corrosion Coupon Locations}
+
+\section{PS-3 Platform Coupon Locations}
+
+\begin{longtable}{|p{2.5cm}|p{5cm}|p{2.5cm}|p{2.5cm}|}
+\caption{Complete Coupon Location List -- PS-3} \\
+\hline
+\rowcolor{tableheader}
+\textcolor{white}{\textbf{Tag No.}} & \textcolor{white}{\textbf{Line Description}} & \textcolor{white}{\textbf{Orientation}} & \textcolor{white}{\textbf{Coupon Type}} \\
+\hline
+\endfirsthead
+\hline
+\rowcolor{tableheader}
+\textcolor{white}{\textbf{Tag No.}} & \textcolor{white}{\textbf{Line Description}} & \textcolor{white}{\textbf{Orientation}} & \textcolor{white}{\textbf{Coupon Type}} \\
+\hline
+\endhead
+53-XCC-1413 & PS-3A Platform Lower deck & Top Mounted 12 O'clock & 3" Strip \\
+\hline
+53-XCC-918 & PS-3B to PS-3A Pipe Bridge (Right Side) & Top Mounted 12 O'clock & Disc Coupon \\
+\hline
+53-XCC-982 & PS-3B to PS-3A Pipe Bridge (Right Side) & Top Mounted 12 O'clock & Disc Coupon \\
+\hline
+53-XCC-985 & PS-3B to PS-3A Pipe Bridge (Left Side) & Top Mounted 12 O'clock & Disc Coupon \\
+\hline
+53-XCC-949 & PS-3B to PS-3C Platform Pipe Bridge & Top Mounted 12 O'clock & 3" Strip \\
+\hline
+53-XCC-951 & 12" Oil Line from Uwainat Header & Top Mounted 12 O'clock & 3" Strip \\
+\hline
+53-XCC-953 & 12" Oil Line from Uwainat Header & Top Mounted 12 O'clock & 3" Strip \\
+\hline
+53-XCC-1430 & PS-3B Separator Location Upper Deck & Top Mounted 12 O'clock & 3" Strip \\
+\hline
+53-XCC-1428 & 18" Crude inlet to V-5356 & Top Mounted 12 O'clock & 3" Strip \\
+\hline
+53-XCC-973 & PS-3B Separator Location & Top Mounted 12 O'clock & Disc Coupon \\
+\hline
+53-XCC-971 & PS-3B Separator Location & Side Mounted 3/9 O'clock & 3" Strip \\
+\hline
+53-XCC-909 & PS-3B Separator Location & Top Mounted 12 O'clock & Scale Coupon \\
+\hline
+53-XCC-1001 & PS-3B Separator Pig Launcher & Top Mounted 12 O'clock & Scale Coupon \\
+\hline
+53-XCC-945 & PS-3B Production Manifold Upper Deck & Top Mounted 12 O'clock & 3" Strip \\
+\hline
+53-XCC-1143 & PS-3C Riser Platform Lower Deck & Bottom Mounted 6 O'clock & 3" Strip \\
+\hline
+\end{longtable}
+
+\chapter{Daily Progress Reports Summary}
+
+This appendix contains summaries of the daily progress reports submitted during the survey campaign.
+
+\section{July 2025 Reports}
+
+\textbf{July 8, 2025 -- Initial Mobilization}
+\begin{itemize}
+    \item Team arrived at PS-3 and completed platform inductions
+    \item Work permits and Level 2 JSA submitted for approval
+    \item Meetings held with safety team, permit controller, and permit authority
+    \item Visual survey completed to confirm location Tag IDs
+    \item Equipment delayed due to vessel reallocation to well jacket priority work
+\end{itemize}
+
+\textbf{July 9, 2025 -- Operations Commenced}
+\begin{itemize}
+    \item ER Probe readings completed at all 36 probe locations
+    \item Coupon retrievals started at 2 high-pressure locations
+    \item Locations serviced: 53-XCC-951, 53-XCC-953
+    \item Checkmate cable issues noted during probe readings
+\end{itemize}
+
+\section{August 2025 Reports}
+
+\textbf{August 24, 2025 -- Weather Hold}
+\begin{itemize}
+    \item Work suspended due to rough sea conditions
+    \item Vessel unable to proceed safely to PS-3
+    \item Operations postponed to following day
+\end{itemize}
+
+\textbf{August 25, 2025 -- Final Operations}
+\begin{itemize}
+    \item Resumed operations after weather improvement
+    \item Heat index caused delayed permit issuance
+    \item Completed retrieval at 53-XCC-1428
+    \item Replaced ER probe at 53-XCP-1427
+    \item All pending PS-3 work completed
+\end{itemize}
+
+\chapter{Photographic Record}
+
+\textit{Note: Photographs were taken at each location during coupon retrieval and probe servicing operations. The photographic record includes:}
+
+\begin{itemize}
+    \item Access fitting photographs (before and after service)
+    \item Retrieved coupon/device photographs
+    \item Installed coupon/device photographs
+    \item General area photographs for location reference
+\end{itemize}
+
+\textit{Full photographic records are maintained in the project files and available upon request.}
+
+\chapter{Comparison with 2023 Survey}
+
+A comparison between the 2023 and 2025 corrosion monitoring surveys indicates:
+
+\begin{table}[H]
+\centering
+\caption{Survey Comparison 2023 vs 2025}
+\begin{tabular}{lcc}
+\toprule
+\textbf{Parameter} & \textbf{2023 Survey} & \textbf{2025 Survey} \\
+\midrule
+Survey Duration & July 2023 & July-August 2025 \\
+Locations Surveyed & PS-3, Halul & PS-3, Halul \\
+Coupons Retrieved & -- & 122 \\
+ER Probes Serviced & 36 & 36 \\
+New Probes Installed & Multiple & Multiple \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+% End of document
+\vfill
+\begin{center}
+\rule{0.5\textwidth}{0.4pt}\\[0.5em]
+\textit{End of Report}\\
+\textit{Document prepared by Axess-Corrosion / Petromech}\\
+\textit{December 2025}
+\end{center}
+
+\end{document}
